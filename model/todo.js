@@ -13,7 +13,7 @@ const taskSchema=new mongoose.Schema({
     },
     task_due:{
         type:String,
-        required:true,
+        required:false
     },
     category: {
         type: String,

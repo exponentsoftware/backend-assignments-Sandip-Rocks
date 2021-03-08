@@ -4,7 +4,7 @@
   "description": "- Create APIs to get all, get by id, add, update by id and delete by id a TODO list\r - Should use MongoDB as a database\r - API should not have any additional routes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"nodemon server.js"
   },
   "repository": {
     "type": "git",
