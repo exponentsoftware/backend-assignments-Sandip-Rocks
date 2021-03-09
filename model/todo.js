@@ -3,25 +3,23 @@ const mongoose=require('mongoose');
 const taskSchema=new mongoose.Schema({
     username:{
         type:String,
-        required:true,
-        trim:true
+        required:[true, "Username is required."]
     },
     title:{
         type:String,
-        required:true,
-        trim:true
+        required:[true,"Title is required"]
     },
-    task_due:{
-        type:String,
-        required:false
+    status:{
+        type:Boolean,
+        default:false
     },
     category: {
         type: String,
-        required: true,
-        trim:true
-    },
+        enum:["Work","Hobby","Task"],
+        required: true
+    }
 },
-{ timestamps: {} });
+{ timestamps: true });
 
 const todo=mongoose.model('task',taskSchema);
 
